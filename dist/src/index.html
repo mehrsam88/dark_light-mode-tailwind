@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/output.css" />
+    <title>Document</title>
+  </head>
+  <body class="bg-cream-light dark:bg-black-light font-lato-regular">
+    <!--! dark & light mode toggle - tailwind css -->
+    <label
+      class="bg-white w-14 h-14 absolute bottom-4 right-4 rounded-full grid place-content-center cursor-pointer shadow-10xl"
+      for="switch"
+    >
+      <input
+        id="switch"
+        class="hidden"
+        type="checkbox"
+        onclick="toggleTheme()"
+      />
+      <div class="icon transition-transform duration-500 delay-200 icon-moon">
+        <svg
+          height="28"
+          width="28"
+          fill="#2C2D5B"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
+            fill-rule="evenodd"
+          ></path>
+        </svg>
+      </div>
+
+      <div class="icon transition-transform duration-500 icon-sun">
+        <svg
+          height="28"
+          width="28"
+          fill="#F67366"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"
+          ></path>
+        </svg>
+      </div>
+    </label>
+
+    <!--* Nav Bar - tailwind css -->
+    <nav
+      class="lg:px-20 md:px-5 px-5 lg:py-6 py-3 flex justify-between items-center w-full z-50"
+    >
+      <h1 class="text-purple-medium dark:text-white text-2xl font-light z-50">
+        Sign<span class="font-lato-bold text-dark-red">Up</span>
+      </h1>
+      <ul
+        id="nav"
+        class="rounded-b-3xl lg:rounded-none lg:flex lg:flex-row lg:px-0 px-4 w-full lg:w-auto lg:flex-shrink-0 lg:items-center lg:static absolute top-[64px] left-0 *:lg:my-0 *:my-4 *:cursor-pointer text-black-dark text-md bg-cream-light dark:lg:bg-black-light lg:shadow-none shadow-[0px_15px_20px_-10px] lg:translate-y-0 translate-y-[-20pc] transition-transform duration-500 z-10"
+      >
+        <li class="relative">
+          <a
+            class="dark:text-white md:mx-4 flex lg:justify-center before:absolute before:w-[80%] before:h-1 before:rounded-[4px] lg:before:bg-[#18272F] dark:lg:before:bg-white lg:before:-bottom-1 lg:before:origin-right lg:before:scale-x-0 lg:hover:before:origin-left lg:hover:before:scale-x-100 before:transition-transform before:duration-300 before:ease-in-out"
+            href="#"
+            >Company</a
+          >
+        </li>
+        <li class="relative">
+          <a
+            class="dark:text-white md:mx-4 flex lg:justify-center before:absolute before:w-[80%] before:h-1 before:rounded-[4px] lg:before:bg-[#18272F] dark:lg:before:bg-white lg:before:-bottom-1 lg:before:origin-right lg:before:scale-x-0 lg:hover:before:origin-left lg:hover:before:scale-x-100 before:transition-transform before:duration-300 before:ease-in-out"
+            href="#"
+            >Services</a
+          >
+        </li>
+        <li class="relative">
+          <a
+            class="dark:text-white md:mx-4 flex lg:justify-center before:absolute before:w-[80%] before:h-1 before:rounded-[4px] lg:before:bg-[#18272F] dark:lg:before:bg-white lg:before:-bottom-1 lg:before:origin-right lg:before:scale-x-0 lg:hover:before:origin-left lg:hover:before:scale-x-100 before:transition-transform before:duration-300 before:ease-in-out"
+            href="#"
+            >Industries</a
+          >
+        </li>
+        <li class="relative">
+          <a
+            class="dark:text-white md:mx-4 flex lg:justify-center before:absolute before:w-[80%] before:h-1 before:rounded-[4px] lg:before:bg-[#18272F] dark:lg:before:bg-white lg:before:-bottom-1 lg:before:origin-right lg:before:scale-x-0 lg:hover:before:origin-left lg:hover:before:scale-x-100 before:transition-transform before:duration-300 before:ease-in-out"
+            href="#"
+            >Insights</a
+          >
+        </li>
+        <li class="relative">
+          <a
+            class="dark:text-white md:mx-4 flex lg:justify-center before:absolute before:w-[80%] before:h-1 before:rounded-[4px] lg:before:bg-[#18272F] dark:lg:before:bg-white lg:before:-bottom-1 lg:before:origin-right lg:before:scale-x-0 lg:hover:before:origin-left lg:hover:before:scale-x-100 before:transition-transform before:duration-300 before:ease-in-out"
+            href="#"
+            >News and Media</a
+          >
+        </li>
+      </ul>
+      <div class="flex items-center *:cursor-pointer *:text-sm text-lg z-50">
+        <a
+          class="bg-purple-medium sm:inline-flex hidden text-white rounded-lg shadow-transition dark:bg-white dark:border-transparent border-purple-medium border-2 dark:text-purple-medium px-7 py-2.5 mr-5"
+          >Join Now</a
+        >
+        <a
+          class="text-purple-medium sm:inline-flex hidden rounded-lg border-2 border-purple-medium shadow-transition dark:border-white transition-shadow dark:text-white px-7 py-2.5"
+          >Request Quote</a
+        >
+        <div class="lg:hidden ml-3">
+          <button
+            type="button"
+            id="nav-icon"
+            onclick="ham_menu()"
+            class="flex justify-center items-center"
+          >
+            <div
+              class="relative my-auto z-20 transform rotate-0 transition duration-75 ease-in-out cursor-pointer size-8 w-[38px] *:dark:bg-white"
+            >
+              <span
+                class="bg-black-dark block absolute w-full h-[5px] rounded-[7px] opacity-100 transform transition duration-200 ease-in-out origin-right top-0"
+              ></span>
+              <span
+                class="bg-black-dark block absolute w-full h-[5px] rounded-[7px] transform transition duration-200 ease-in-out origin-right top-3.5"
+              ></span>
+              <span
+                class="bg-black-dark block absolute w-full h-[5px] rounded-[7px] opacity-100 transform transition duration-200 ease-in-out origin-right top-7"
+              ></span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>
